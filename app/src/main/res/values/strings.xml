@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Easy CST</string>
+
+    <string name="groundbooking">GROUND BOOKING</string>
+    <string name="maintenance">MAINTENANCE</string>
+    <string name="timetable">TIME TABLE</string>
+    <string name="attendance">ATTENDANCE</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="about">ABOUT</string>
+    <string name="shareapp">SHARE APP</string>
+    <string name="rateapp">RATE APP</string>
+    <string name="help">HELP</string>
+
 </resources>
