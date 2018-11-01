@@ -25,7 +25,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="150dp"
-                android:layout_height="154dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/cstlogo" />
@@ -48,21 +48,21 @@
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/groundb" />
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/maintanance" />
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/timetable" />
                 </TableRow>
 
                 <TableRow
@@ -97,21 +97,21 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/attendance" />
 
                     <ImageView
                         android:id="@+id/imageView7"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/feedback" />
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/about" />
                 </TableRow>
 
                 <TableRow
@@ -147,21 +147,21 @@
 
                     <ImageView
                         android:id="@+id/imageView10"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/share" />
 
                     <ImageView
                         android:id="@+id/imageView8"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/rate" />
 
                     <ImageView
                         android:id="@+id/imageView9"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/cstlogo" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/help1" />
                 </TableRow>
 
                 <TableRow
