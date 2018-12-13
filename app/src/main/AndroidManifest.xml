@@ -4,13 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/cstlogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/cstlogo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppThemeNoHome">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home"></activity>
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".maintain"
+            android:label="Maintenance Registration"
+            android:parentActivityName=".Home">
+        </activity>
+
+        <activity
+            android:name=".register"
+            android:label="Create Your Account">
+        </activity>
     </application>
 
 </manifest>
