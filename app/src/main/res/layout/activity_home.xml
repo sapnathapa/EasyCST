@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".Home"
+    android:background="@drawable/bgcolor_home">
 
     <ScrollView
+        android:layout_gravity="center"
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,6 +20,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -27,10 +30,11 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/cstlogo" />
 
             <TextView
+
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,6 +43,7 @@
 
 
             <TableLayout
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -50,22 +55,26 @@
                         android:id="@+id/imageView2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/groundb" />
+                        android:src="@drawable/groundb"
+                        android:layout_gravity="center"/>
 
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/maintanance" />
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/timetable" />
                 </TableRow>
 
                 <TableRow
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -92,6 +101,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -115,6 +125,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -142,6 +153,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -165,6 +177,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

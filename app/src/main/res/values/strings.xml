@@ -10,5 +10,10 @@
     <string name="shareapp">SHARE APP</string>
     <string name="rateapp">RATE APP</string>
     <string name="help">HELP</string>
+    <string name="room_number">Room Number</string>
+    <string name="maintenance_registration">Maintenance Registration</string>
+    <string name="submit">Submit</string>
+    <string name="problem">Please describe your problem here.........</string>
+    <string name="phone_number">Phone Number</string>
 
 </resources>
