@@ -15,5 +15,10 @@
     <string name="submit">Submit</string>
     <string name="problem">Please describe your problem here.........</string>
     <string name="phone_number">Phone Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="user_id">User ID</string>
+    <string name="new_password">New Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="register">Register</string>
 
 </resources>
