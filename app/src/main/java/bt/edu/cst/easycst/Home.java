@@ -13,10 +13,10 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ImageView img = (ImageView)findViewById(R.id.imageView9);
-        ImageView reg = (ImageView) findViewById(R.id.imageView8);
+        ImageView maintain = (ImageView)findViewById(R.id.maintain);
+        ImageView rate = (ImageView) findViewById(R.id.rate);
 
-        img.setOnClickListener(new View.OnClickListener() {
+        maintain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home.this,maintain.class);
@@ -24,7 +24,7 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        reg.setOnClickListener(new View.OnClickListener() {
+        rate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home.this,register.class);

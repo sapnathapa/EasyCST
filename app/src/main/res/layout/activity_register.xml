@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".register"
-    android:background="@drawable/bgcolor_home">
+    android:background="@drawable/background">
 
     <ScrollView
         android:layout_width="match_parent"
