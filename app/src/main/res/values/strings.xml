@@ -21,4 +21,18 @@
     <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
 
+
+<!-- Main Content Label Resources -->
+  
+    <string name="lcom">Easy CST</string>>  
+    <string name="lderm">FOOTBALL</string>
+    <string name="lemer">MAINTENANCE</string>
+    <string name="lent">TIME TABLE</string>
+    <string name="lfore">ATTENDANCE</string>
+    <string name="lopd">FEEDBACK/SUGGESTION</string>
+    <string name="lgyna">ABOUT</string>
+    <string name="lmed">SHARE APP</string>
+    <string name="lopth">RATE APP</string>
+    <string name="lortho">HELP</string>
+
 </resources>
