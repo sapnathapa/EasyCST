@@ -2,8 +2,10 @@ package bt.edu.cst.easycst;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Button register = (Button) findViewById(R.id.regButton);
 
         List<String> departments = new ArrayList<String>();
         departments.add("Please Select Your Department");
@@ -31,6 +34,16 @@ public class register extends AppCompatActivity {
 
         //department.setPrompt("Department");
         spinner.setAdapter(dataAdapter);
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(register.this,Home.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
