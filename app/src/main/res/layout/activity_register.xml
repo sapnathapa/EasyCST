@@ -34,7 +34,7 @@
                 android:hint="@string/user_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"/>
+                android:inputType="number"/>
 
             <RadioGroup
                 android:layout_marginTop="15dp"
@@ -53,6 +53,7 @@
                 <RadioButton
                     android:id="@+id/male"
                     android:layout_width="wrap_content"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:text="Male      " />
 
@@ -71,27 +72,19 @@
             </Spinner>
 
             <EditText
-                android:layout_marginTop="15dp"
                 android:id="@+id/regemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:hint="College email"
                 android:inputType="textEmailAddress" />
 
             <EditText
                 android:layout_marginTop="15dp"
-                android:id="@+id/editText4"
+                android:id="@+id/pass1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/new_password"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:layout_marginTop="15dp"
-                android:id="@+id/editText5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/repeat_password"
                 android:inputType="textPassword" />
 
             <Button
