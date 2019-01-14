@@ -12,8 +12,8 @@
     <!-- Custom Dimensions -->
     <!-- The dimensions are in three categories for the small, medium and large device compatibility -->
     <!-- The name attribute for the dimention resource is in the format name<x> where x is empty for the normal device screen, M for Medium sw600 dp screen and L for Large sw720dp screens -->
-    <dimen name="gridImageSize">90dp</dimen>
-    <dimen name="logoImageSize">150dp</dimen>
+    <dimen name="gridImageSize">60dp</dimen>
+    <dimen name="logoImageSize">170dp</dimen>
 
     <dimen name="spTitleDoc">25dp</dimen>
 
