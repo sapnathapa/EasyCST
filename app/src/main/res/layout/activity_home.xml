@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
-    android:background="@drawable/background">
+    android:orientation="vertical"
+    tools:context=".Home">
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -24,31 +22,33 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" >
+        tools:layout_constraintTop_creator="1">
 
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal">
 
-
-            <ImageView
-                android:id="@+id/comm"
-                android:layout_width="@dimen/logoImageSize"
-                android:layout_height="@dimen/logoImageSize"
-                android:padding="10dp"
-                app:srcCompat="@drawable/cstlogo" />
-
-        </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginBottom="15dp">
+                android:gravity="center_horizontal">
+
+
+                <ImageView
+                    android:id="@+id/comm"
+                    android:layout_width="@dimen/logoImageSize"
+                    android:layout_height="@dimen/logoImageSize"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/cstlogo" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal">
 
 
                 <TextView
@@ -56,72 +56,73 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="@string/lcom"
+                    android:text="@string/app_name"
                     android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:textSize="30sp"/>
-
-
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
             </TableRow>
 
+            <!--- Home Icons Layout -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:id="@+id/derm"
-                    android:layout_width="@dimen/gridImageSize"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/football" />
-
+                android:layout_gravity="center_horizontal"
+                android:weightSum="3">
 
                 <ImageView
                     android:id="@+id/maintain"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/maintanance" />
-
                 <ImageView
                     android:id="@+id/ent"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/time_table" />
+                <ImageView
+                    android:id="@+id/fore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/gridImageSize"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/attendance" />
+
+
+
+
+
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginBottom="15dp">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/l4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lderm"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/maintenance"
+                    android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/l5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lemer"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/timetable"
+                    android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/l6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lent"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/attendance"
+                    android:textColor="@android:color/black" />
 
             </TableRow>
 
@@ -132,58 +133,58 @@
 
 
 
-                <ImageView
-                    android:id="@+id/fore"
-                    android:layout_width="@dimen/gridImageSize"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/attendance" />
 
                 <ImageView
                     android:id="@+id/gopd"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/feedback" />
 
                 <ImageView
+                android:id="@+id/derm"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/football" />
+
+                <ImageView
                     android:id="@+id/gyna"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/about" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginBottom="15dp">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/l7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lfore"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/feedback"
+                    android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/l8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lopd"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/football"
+                    android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/l9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lgyna"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/about"
+                    android:textColor="@android:color/black" />
 
             </TableRow>
 
@@ -194,72 +195,56 @@
 
                 <ImageView
                     android:id="@+id/medc"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/share" />
 
                 <ImageView
                     android:id="@+id/rate"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/rate" />
 
                 <ImageView
                     android:id="@+id/ortp"
-                    android:layout_width="@dimen/gridImageSize"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/help" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginBottom="15dp">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/l10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lmed"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/share"
+                    android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/l11"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lopth"
-                    android:textColor="@android:color/black"/>
+                    android:layout_weight="0.33"
+                    android:text="@string/rate"
+                    android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/l12"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lortho"
-                    android:textColor="@android:color/black"/>
-
+                    android:layout_weight="0.33"
+                    android:text="@string/help"
+                    android:textColor="@android:color/black" />
             </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/bottomRowSpace_mainScreen" />
-            </TableRow>
-
         </TableLayout>
-
-
     </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
