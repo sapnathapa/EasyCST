@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="bt.edu.cst.easycst">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/cstlogo"
@@ -20,25 +22,22 @@
         </activity>
         <activity
             android:name=".Home"
-            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".maintain"
             android:label="Maintenance Registration"
-            android:parentActivityName=".Home">
-        </activity>
-
+            android:parentActivityName=".Home"></activity>
         <activity
             android:name=".register"
-            android:label="Create Your Account">
-        </activity>
+            android:label="Create Your Account"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".Feedback"></activity>
     </application>
 
 </manifest>
