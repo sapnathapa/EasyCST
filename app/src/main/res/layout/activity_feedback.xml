@@ -7,33 +7,17 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:orientation="vertical"
-    tools:context=".maintain">
+    tools:context=".Feedback">
 
-    <EditText
-        android:id="@+id/room"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:hint="@string/room_number"
-        android:autofillHints="HA-3-01"
-        android:inputType="text" />
 
-    <EditText
-        android:layout_marginTop="20dp"
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:hint="@string/phone_number"
-        android:inputType="numberSigned" />
+
 
     <EditText
         android:layout_marginTop="30dp"
-        android:id="@+id/descript"
-        android:autofillHints="tubelight not working or fan not working"
+        android:id="@+id/feedback"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:hint="@string/problem"
+        android:hint="Please type your feedback or suggestion here"
         android:inputType="textMultiLine" />
 
     <Button

@@ -133,7 +133,7 @@
 
 
                 <ImageView
-                    android:id="@+id/gopd"
+                    android:id="@+id/feedback"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
                     android:layout_weight="1"
