@@ -18,6 +18,7 @@ public class Home extends AppCompatActivity {
         ImageView maintain = (ImageView)findViewById(R.id.maintain);
         ImageView rate = (ImageView) findViewById(R.id.rate);
         ImageView feedback =(ImageView) findViewById(R.id.feedback);
+        ImageView attendance =(ImageView) findViewById(R.id.attendance);
 
         maintain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,14 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home.this,Feedback.class);
+                startActivity(intent);
+            }
+        });
+
+        attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this,Attendance.class);
                 startActivity(intent);
             }
         });
