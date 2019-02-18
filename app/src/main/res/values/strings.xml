@@ -11,6 +11,10 @@
     <string name="new_password">Password</string>
     <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
+    <string name="ver_id">Version : 1.0</string>
+    <string name="copyrit_id">© 2018 - 2019 All rights reserved</string>
+
+
 
 
     <!-- Main Content Label Resources -->
