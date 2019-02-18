@@ -47,7 +47,13 @@
             android:parentActivityName=".Home" />
         <activity android:name=".Share" />
         <activity android:name=".Help" />
-        <activity android:name=".Rate"></activity>
+        <activity android:name=".Rate" />
+        <activity
+            android:name=".Attendance"
+            android:label="Attendance Tracking"
+            android:parentActivityName=".Home">
+
+        </activity>
     </application>
 
 </manifest>
