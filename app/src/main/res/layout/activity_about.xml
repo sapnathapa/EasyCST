@@ -7,94 +7,96 @@
     android:orientation="vertical"
     tools:context=".About">
 
+
     <ScrollView
-        android:id="@+id/scrollView3"
+        android:id="@+id/scrollView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!--LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" /-->
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="140dp"
+                android:layout_marginBottom="13dp"
+                android:contentDescription="@string/ver_id"
+                android:text="@string/ver_id"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="128dp"
+                android:layout_marginEnd="129dp"
+                android:text="About the App"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="381dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="13dp"
+                android:contentDescription="@string/aboutapp"
+                android:text="@string/aboutapp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="116dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginBottom="11dp"
+                android:text="About Developers"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:contentDescription="@string/about_dev"
+                android:text="@string/about_dev"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="243dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:contentDescription="@string/copyrit_id"
+                android:text="@string/copyrit_id"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="105dp"
-        android:layout_height="29dp"
-        android:contentDescription="@string/ver_id"
-        android:text="@string/ver_id"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="36dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="128dp"
-        android:layout_height="30dp"
-        android:text="About the App"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="78dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="381dp"
-        android:layout_height="175dp"
-        android:contentDescription="@string/about_app"
-        android:text="@string/about_app"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="108dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="153dp"
-        android:layout_height="29dp"
-        android:text="About Developers"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="296dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="381dp"
-        android:layout_height="116dp"
-        android:contentDescription="@string/about_dev"
-        android:text="@string/about_dev"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="337dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="243dp"
-        android:layout_height="30dp"
-        android:contentDescription="@string/copyrit_id"
-        android:text="@string/copyrit_id"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="474dp" />
 
 </android.support.constraint.ConstraintLayout>
