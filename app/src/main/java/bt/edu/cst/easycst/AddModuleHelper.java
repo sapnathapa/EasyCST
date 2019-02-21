@@ -1,5 +1,7 @@
 package bt.edu.cst.easycst;
 
+
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by Tek Nath Acharya nathtek136@gmail.com
  * for Easy CST app
  */
-public class AttendanceHelper extends SQLiteOpenHelper {
+public class AddModuleHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME="trackattendance";
     public static final String TABLE_NAME="modules";
 
@@ -18,7 +20,7 @@ public class AttendanceHelper extends SQLiteOpenHelper {
     public static final String COL_3="TUTOR";
     public static final String COL_4="ATTENDANCE";
 
-    public AttendanceHelper(Context context) {
+    public AddModuleHelper(Context context) {
         super(context,DATABASE_NAME,null,1);
     }
 
@@ -33,11 +35,19 @@ public class AttendanceHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
     }
 
-    public Cursor getModule() {
+    public boolean insertModule(String name,String tutor,int attendance) {
         SQLiteDatabase db=this.getWritableDatabase();
-        Cursor gotModules = db.rawQuery("Select * from " + TABLE_NAME,null);
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COL_2,name);
+        contentValues.put(COL_3,tutor);
+        contentValues.put(COL_4,attendance);
 
-        return gotModules;
+        long result=db.insert(TABLE_NAME,null,contentValues);
+        db.close();
+        if(result==-1)
+            return  false;
+        else
+            return true;
     }
 
     /*public boolean updateTrack(int key, String m1,String m2,String m3,String m4,String m5) {
@@ -63,4 +73,3 @@ public class AttendanceHelper extends SQLiteOpenHelper {
         return res;
     }*/
 }
-
