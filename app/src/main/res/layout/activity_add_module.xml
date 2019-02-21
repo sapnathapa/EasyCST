@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical"
+    tools:context=".AddModule">
+
+    <EditText
+        android:id="@+id/mnamecode"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:hint="Module name/code"
+        android:autofillHints="Introduction to programming CPL101"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/tutor"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:hint="Module tutor"
+        android:autofillHints="Prof. Venka"
+        android:inputType="text" />
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Save" />
+</LinearLayout>

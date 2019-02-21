@@ -52,7 +52,12 @@
             android:name=".Attendance"
             android:label="Attendance Tracking"
             android:parentActivityName=".Home">
+        </activity>
 
+        <activity
+            android:name=".AddModule"
+            android:label="Add Module"
+            android:parentActivityName=".Attendance">
         </activity>
     </application>
 
