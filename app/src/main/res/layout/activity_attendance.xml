@@ -23,6 +23,7 @@
             <TextView
                 android:id="@+id/display"
                 android:layout_width="match_parent"
+                android:textColor="Black"
                 android:layout_height="match_parent" />
 
             <android.support.design.widget.FloatingActionButton
