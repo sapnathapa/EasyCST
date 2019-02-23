@@ -21,13 +21,17 @@
     <string name="about_dev">This app was developed by Mr.Tek Nath Acharya(nathtek136@gmail.com),
         Mr.Karma Dori(karmadorgey@gmail.com), Ms.Deepika Suberi(deepikasbr@gmail.com),
         Mr.Karma Tshewang(kartse100@gmail.com) of college of Science and Technology.</string>
+    <string name="h_maintanance">1. Type the room number.\n
+                                2. Type the phone number.\n
+                                3. Describe the problem related to the room.\n
+                                4. Click summit.</string>
     <!-- rate app -->
-    <string name="install_google_play_store" translatable="false">Please install google play store and then try again.</string>
-    <string name="url_market_details" translatable="false">market://details?id=</string>
-    <string name="url_playstore_app" translatable="false">https://play.google.com/store/apps/details?id=</string>
-    <string name="url_market_search_app" translatable="false">market://search?q=pub:</string>
-    <string name="url_playstore_search_app" translatable="false">http://play.google.com/store/search?q=pub:</string>
-    <string name="app_link" translatable="false">https://play.google.com/store/apps/details?id=</string>
+    <!--<string name="install_google_play_store" translatable="false">Please install google play store and then try again.</string>-->
+    <!--<string name="url_market_details" translatable="false">market://details?id=</string>-->
+    <!--<string name="url_playstore_app" translatable="false">https://play.google.com/store/apps/details?id=</string>-->
+    <!--<string name="url_market_search_app" translatable="false">market://search?q=pub:</string>-->
+    <!--<string name="url_playstore_search_app" translatable="false">http://play.google.com/store/search?q=pub:</string>-->
+    <!--<string name="app_link" translatable="false">https://play.google.com/store/apps/details?id=</string>-->
 
 
 

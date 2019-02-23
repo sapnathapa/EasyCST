@@ -3,9 +3,11 @@ package bt.edu.cst.easycst;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +26,8 @@ import java.util.Map;
 public class maintain extends AppCompatActivity {
     // Creating EditText.
     EditText room, phone, descript;
+    private TextInputLayout room1, phone1, desc;
+
 
     // Creating button;
     Button Register;
@@ -49,11 +53,13 @@ public class maintain extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Assigning ID's to EditText.
-        room = (EditText) findViewById(R.id.room);
+        room1 =  findViewById(R.id.roomWrapper);
 
-        phone = (EditText) findViewById(R.id.phone);
+        phone1 =  findViewById(R.id.phoneWrapper);
 
-        descript = (EditText) findViewById(R.id.descript);
+       descript = findViewById(R.id.descript);
+       // desc = findViewById(R.id.descriptionWrapper);
+        //descript = findViewById(R.id.descript);
 
 
         // Assigning ID's to Button.
@@ -147,11 +153,15 @@ public class maintain extends AppCompatActivity {
     public void CheckEditTextIsEmptyOrNot(){
 
         // Getting values from EditText.
-        RoomHolder = room.getText().toString().trim();
-        PhoneHolder= phone.getText().toString().trim();
+        RoomHolder = room1.getEditText().getText().toString().trim();
+        PhoneHolder= phone1.getEditText().getText().toString().trim();
+        //DescriptHolder = desc.getEditText().getText().toString().trim();
         DescriptHolder = descript.getText().toString().trim();
 
-
+        Log.d("room1", RoomHolder);
+        Log.d("phone1",PhoneHolder);
+        //Log.d("desc", DescriptHolder);
+        Log.d("descritp",DescriptHolder);
         // Checking whether EditText value is empty or not.
         if(TextUtils.isEmpty(RoomHolder) || TextUtils.isEmpty(RoomHolder) || TextUtils.isEmpty(DescriptHolder))
         {
