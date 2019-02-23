@@ -39,16 +39,17 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
     }
     @Override
     public void onBindViewHolder(final ModuleViewHolder holder, final int position) {
-        ModuleDetails userDetails = moduleDetailsList.get(position);
-        holder.tvName.setText(userDetails.getName());
-        holder.tvAddress.setText(userDetails.getAddress());
-        holder.tvPhone.setText(userDetails.getMobileNo());
-        holder.tvProfession.setText(userDetails.getProfessiion());
+        ModuleDetails moduleDetails = moduleDetailsList.get(position);
+        holder.tvName.setText(moduleDetails.getMcode());
+        holder.tvAddress.setText(moduleDetails.getMname());
+        holder.tvPhone.setText(moduleDetails.getMtutor());
+        //holder.tvProfession.setText(moduleDetails.getMattendance());
+        holder.tvProfession.setText("8");
         holder.ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final ModuleDetails userDetails = moduleDetailsList.get(position);
-                final int userId = userDetails.getUserId();
+                final int moduleID = userDetails.getModuleID();
                 dbHelper = new ModuleDatabaseHelper(context);
                 db = dbHelper.getWritableDatabase();
                 PopupMenu menu = new PopupMenu(context, holder.ivMenu);
@@ -59,7 +60,7 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.delete:
-                                db.delete(ModuleDatabase.TABLE_NAME,ModuleDatabase._ID + " = " + userId,null);
+                                db.delete(ModuleDatabase.TABLE_NAME,ModuleDatabase._ID + " = " + moduleID,null);
                                 notifyItemRangeChanged(position,moduleDetailsList.size());
                                 moduleDetailsList.remove(position);
                                 notifyItemRemoved(position);
@@ -67,7 +68,7 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
                                 break;
                             case R.id.edit:
                                 Intent intent = new Intent(context, UpdateModule.class);
-                                intent.putExtra("USERID", userId);
+                                intent.putExtra("MID", moduleID);
                                 context.startActivity(intent);
                                 break;
                         }

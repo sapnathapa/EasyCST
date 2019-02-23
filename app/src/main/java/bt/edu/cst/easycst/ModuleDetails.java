@@ -5,37 +5,35 @@ package bt.edu.cst.easycst;
  * for Easy CST app
  */
 public class ModuleDetails {
-    private String name,address,mobileNo,professiion;
-    int userId;
-    public int getUserId() {
-        return userId;
-    }
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-    public String getName() {
+    private String mcode,mname,mtutor,attendance;
+    int moduleID;
 
-        return name;
+    public int getModuleID() {
+        return moduleID;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setModuleId(int moduleID) {
+        this.moduleID = moduleID;
     }
-    public String getAddress() {
-        return address;
+
+    public String getMcode() { return mcode; }
+    public void setMcode(String mcode) {
+        this.mcode = mcode;
     }
-    public void setAddress(String address) {
-        this.address = address;
+
+    public String getMname() { return mname; }
+    public void setMname(String mname) {
+        this.mname = mname;
     }
-    public String getMobileNo() {
-        return mobileNo;
+
+    public String getMtutor() {
+        return mtutor;
     }
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
+    public void setMtutor(String mtutor) { this.mtutor = mtutor; }
+
+    public String getMattendance() {
+        return attendance;
     }
-    public String getProfessiion() {
-        return professiion;
-    }
-    public void setProfessiion(String professiion) {
-        this.professiion = professiion;
+    public void setMattendance(String attendance) {
+        this.attendance = attendance;
     }
 }

@@ -28,9 +28,11 @@ public class Attendance extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
+
         dbHelper = new ModuleDatabaseHelper(this);
         db = dbHelper.getReadableDatabase();
         recyclerView = (RecyclerView) findViewById(R.id.modules);
+
         addmodule = findViewById(R.id.addmodule);
         addmodule.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,11 +49,11 @@ public class Attendance extends AppCompatActivity {
             moduleDetailsList.clear();
             while (c1.moveToNext()) {
                 ModuleDetails moduleDetailsItem = new ModuleDetails();
-                moduleDetailsItem.setUserId(c1.getInt(c1.getColumnIndex(ModuleDatabase._ID)));
-                moduleDetailsItem.setName(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL1)));
-                moduleDetailsItem.setAddress(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL2)));
-                moduleDetailsItem.setMobileNo(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL3)));
-                moduleDetailsItem.setProfessiion(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL4)));
+                moduleDetailsItem.setModuleId(c1.getInt(c1.getColumnIndex(ModuleDatabase._ID)));
+                moduleDetailsItem.setMcode(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL1)));
+                moduleDetailsItem.setMname(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL2)));
+                moduleDetailsItem.setMtutor(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL3)));
+                moduleDetailsItem.setMattendance(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL4)));
                 moduleDetailsList.add(moduleDetailsItem);
             }
         }
