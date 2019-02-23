@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="About Developers"
+                android:text="Developers"
                 android:layout_gravity="center"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
@@ -80,15 +80,29 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/copyrit_id"
+                android:text="Special Thanks"
                 android:layout_gravity="center"
-                android:textSize="15sp"
                 android:textColor="@android:color/black"
+                android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:autoLink="email"
+                android:textIsSelectable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/about_thank"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
         </LinearLayout>
     </ScrollView>
 
