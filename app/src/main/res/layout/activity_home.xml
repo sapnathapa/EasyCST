@@ -208,7 +208,7 @@
                     app:srcCompat="@drawable/rate" />
 
                 <ImageView
-                    android:id="@+id/ortp"
+                    android:id="@+id/help"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/gridImageSize"
                     android:layout_weight="1"
