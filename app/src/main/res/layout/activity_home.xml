@@ -140,7 +140,7 @@
                     app:srcCompat="@drawable/feedback" />
 
                 <ImageView
-                android:id="@+id/derm"
+                android:id="@+id/football"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/gridImageSize"
                 android:layout_weight="1"
