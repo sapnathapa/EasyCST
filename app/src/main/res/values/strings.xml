@@ -12,19 +12,31 @@
     <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
     <string name="ver_id">Version : 1.0</string>
-    <string name="copyrit_id">© 2018 - 2019 All rights reserved</string>
-    <string name="aboutapp">EasyCST was lunched because we saw the need for a platform where the
-        college student can have easy access to the service provided by the college like maintenance services.
-        It also provide with the privilege to track the self attendance and own editable timetable for the
-        modules and also we can provide the feedback and suggestion for the betterment of the college.We hope
-        to address the services provided from the cllege and make college life very easy through EasyCST.</string>
-    <string name="about_dev">This app was developed by Mr.Tek Nath Acharya(nathtek136@gmail.com),
-        Mr.Karma Dori(karmadorgey@gmail.com), Ms.Deepika Suberi(deepikasbr@gmail.com),
-        Mr.Karma Tshewang(kartse100@gmail.com) of college of Science and Technology.</string>
-    <string name="h_maintanance">1. Type the room number.\n
-                                2. Type the phone number.\n
-                                3. Describe the problem related to the room.\n
-                                4. Click summit.</string>
+    <string name="aboutapp">EasyCST, a platform where the student can have easy access to the service like maintenance.
+        Has privilege to track ones attendance and own editable timetable.
+        User can provide feedback and suggestion for the betterment of the college.
+    </string>
+
+    <string name="about_dev">
+        1. Mr.Tek Nath Acharya(nathtek136@gmail.com)\n
+        2. Mr.Karma Dori(karmadorgey@gmail.com)\n
+        3. Ms.Deepika Suberi(deepikasbr@gmail.com)\n
+        4. Mr.Karma Tshewang(kartse100@gmail.com)
+    </string>
+
+    <string name="about_thank">
+        1. Mr.Parshuram Dhungyel(parshuram.cst@ru.edu.bt)\n
+        2. Mr.Hari Kafley(hari.kafley@itechnologies.bt)\n
+        3. Mr.Khusant Chhetri(0215518.cst@rub.edu.bt)
+    </string>
+
+    <string name="h_maintanance">
+        1. Type the room number.\n
+        2. Type the phone number.\n
+        3. Describe the problem related to the room.\n
+        4. Click summit.
+    </string>
+
     <!-- rate app -->
     <!--<string name="install_google_play_store" translatable="false">Please install google play store and then try again.</string>-->
     <!--<string name="url_market_details" translatable="false">market://details?id=</string>-->
