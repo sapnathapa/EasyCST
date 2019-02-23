@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,7 +31,8 @@ import java.util.Map;
 
 public class register extends AppCompatActivity {
     // Creating EditText.
-    EditText name, uid, email, password ;
+    //EditText name, uid, email, password ;
+    private TextInputLayout name, uid, email, password;
 
     // Creating button;
     Button Register;
@@ -60,13 +63,13 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         // Assigning ID's to EditText.
-        name = (EditText) findViewById(R.id.name);
+        name =  findViewById(R.id.nameWrapper);
 
-        email = (EditText) findViewById(R.id.regemail);
+        email = findViewById(R.id.regemailWrapper);
 
-        password = (EditText) findViewById(R.id.pass1);
+        password = findViewById(R.id.pass1Wrapper);
 
-        uid = (EditText) findViewById(R.id.uid);
+        uid = findViewById(R.id.uidWrapper);
 
         gender = (RadioGroup) findViewById(R.id.gender);
 
@@ -181,10 +184,15 @@ public class register extends AppCompatActivity {
     public void CheckEditTextIsEmptyOrNot(){
 
         // Getting values from EditText.
-        NameHolder = name.getText().toString().trim();
-        UidHolder= uid.getText().toString().trim();
-        PasswordHolder = password.getText().toString().trim();
-        EmailHolder = email.getText().toString().trim();
+        NameHolder = name.getEditText().getText().toString().trim();
+        UidHolder= uid.getEditText().getText().toString().trim();
+        PasswordHolder = password.getEditText().getText().toString().trim();
+        EmailHolder = email.getEditText().getText().toString().trim();
+
+        Log.d("name",NameHolder);
+        Log.d("uid",UidHolder);
+        Log.d("password",PasswordHolder);
+        Log.d("email",EmailHolder);
 
 
         // Checking whether EditText value is empty or not.

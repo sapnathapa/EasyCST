@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,52 +8,81 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/name"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nameWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginTop="20dp"
-                android:hint="@string/full_name"
-                android:inputType="textPersonName" />
+                android:layout_marginEnd="4dp">
 
-            <EditText
-                android:layout_marginTop="15dp"
-                android:id="@+id/uid"
-                android:hint="@string/user_id"
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/full_name"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:hint="@string/full_name"-->
+            <!--android:inputType="textPersonName" />-->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/uidWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:layout_height="70dp"
+                android:layout_marginEnd="4dp">
+
+                <EditText
+                    android:id="@+id/uid"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/user_id"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/uid"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:hint="@string/user_id"-->
+            <!--android:inputType="number" />-->
 
             <RadioGroup
-                android:layout_marginTop="15dp"
                 android:id="@+id/gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:checkedButton="1"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Gender    " />
+                    android:text="Gender    "
+                    android:textColor="@color/black" />
 
                 <RadioButton
                     android:id="@+id/male"
                     android:layout_width="wrap_content"
-                    android:checked="true"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="Male      " />
 
                 <RadioButton
@@ -65,32 +94,62 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </Spinner>
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"></Spinner>
 
-            <EditText
-                android:id="@+id/regemail"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/regemailWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginTop="15dp"
-                android:hint="College email"
-                android:inputType="textEmailAddress" />
+                android:layout_marginEnd="4dp">
 
-            <EditText
-                android:layout_marginTop="15dp"
-                android:id="@+id/pass1"
+                <EditText
+                    android:id="@+id/regemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="College email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/regemail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:hint="College email"-->
+            <!--android:inputType="textEmailAddress" />-->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/pass1Wrapper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/new_password"
-                android:inputType="textPassword" />
+                android:layout_height="70dp"
+                android:layout_marginEnd="4dp">
+
+                <EditText
+                    android:id="@+id/pass1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/new_password"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/pass1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:hint="@string/new_password"-->
+            <!--android:inputType="textPassword" />-->
 
             <Button
-                android:layout_marginTop="15dp"
                 android:id="@+id/regButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
                 android:text="@string/register" />
         </LinearLayout>
     </ScrollView>
