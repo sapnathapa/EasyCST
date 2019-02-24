@@ -5,8 +5,8 @@ package bt.edu.cst.easycst;
  * for Easy CST app
  */
 public class ModuleDetails {
-    private String mcode,mname,mtutor,attendance;
-    int moduleID;
+    private String mcode,mname,mtutor;
+    int moduleID,attendance;
 
     public int getModuleID() {
         return moduleID;
@@ -30,10 +30,10 @@ public class ModuleDetails {
     }
     public void setMtutor(String mtutor) { this.mtutor = mtutor; }
 
-    public String getMattendance() {
+    public int getMattendance() {
         return attendance;
     }
-    public void setMattendance(String attendance) {
+    public void setMattendance(int attendance) {
         this.attendance = attendance;
     }
 }

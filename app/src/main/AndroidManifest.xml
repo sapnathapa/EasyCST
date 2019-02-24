@@ -22,7 +22,6 @@
         </activity>
         <activity
             android:name=".Home"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -57,8 +56,14 @@
         <activity
             android:name=".AddModule"
             android:label="Add Module"
-            android:parentActivityName=".Attendance"></activity>
-        <activity android:name=".UpdateModule"></activity>
+            android:parentActivityName=".Attendance">
+        </activity>
+
+        <activity
+            android:name=".UpdateModule"
+            android:label="Update Module"
+            android:parentActivityName=".Attendance">
+        </activity>
     </application>
 
 </manifest>
