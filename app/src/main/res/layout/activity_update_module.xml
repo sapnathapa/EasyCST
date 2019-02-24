@@ -7,10 +7,10 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:orientation="vertical"
-    tools:context=".AddModule">
+    tools:context=".UpdateModule">
 
-     <EditText
-        android:id="@+id/mcode"
+    <EditText
+        android:id="@+id/updatemcode"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -22,7 +22,7 @@
 
 
     <EditText
-        android:id="@+id/mname"
+        android:id="@+id/updatemname"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -32,7 +32,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/mtutor"
+        android:id="@+id/updatemtutor"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -44,8 +44,8 @@
 
     <Button
         android:layout_marginTop="20dp"
-        android:id="@+id/save"
+        android:id="@+id/updatesave"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Save" />
+        android:text="Update" />
 </LinearLayout>

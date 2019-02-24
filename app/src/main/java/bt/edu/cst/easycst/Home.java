@@ -25,7 +25,11 @@ public class Home extends AppCompatActivity {
         ImageView rate =(ImageView) findViewById(R.id.rate);
         ImageView share =(ImageView) findViewById(R.id.share);
         ImageView football =(ImageView) findViewById(R.id.football);
+<<<<<<< HEAD
         //ImageView help = (ImageView) findViewById(R.id.help);
+=======
+        ImageView help =(ImageView) findViewById(R.id.help);
+>>>>>>> 8a1b5bc51e3fec63c837a2a23b9b273b12d83498
 
         maintain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +95,14 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home.this,register.class);
+                startActivity(intent);
+            }
+        });
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this,Help.class);
                 startActivity(intent);
             }
         });

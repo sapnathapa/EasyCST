@@ -1,48 +1,39 @@
 package bt.edu.cst.easycst;
-
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
-
+import android.widget.Button;
+import bt.edu.cst.easycst.ModuleDetailsAdapter;
+import bt.edu.cst.easycst.ModuleDatabaseContract.ModuleDatabase;
+import bt.edu.cst.easycst.ModuleDatabaseHelper;
+import bt.edu.cst.easycst.ModuleDetails;
+import java.util.ArrayList;
+import java.util.List;
 public class Attendance extends AppCompatActivity {
-
-    AttendanceHelper toGetData;
-    TextView modulet, attendancemiss, plus, minus;
-
+    ModuleDatabaseHelper dbHelper;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mopduleAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+    FloatingActionButton addmodule;
+    List<ModuleDetails> moduleDetailsList;
+    SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
 
-        FloatingActionButton addmodule = findViewById(R.id.addmodule);
-        toGetData = new AttendanceHelper(this);
-        modulet = (TextView) findViewById(R.id.modulet);
-        attendancemiss = (TextView) findViewById(R.id.attendancemiss);
-        plus = (TextView) findViewById(R.id.plusbutton);
-        minus = (TextView) findViewById(R.id.minusbutton);
+        dbHelper = new ModuleDatabaseHelper(this);
+        db = dbHelper.getReadableDatabase();
+        recyclerView = (RecyclerView) findViewById(R.id.modules);
 
-        Cursor res = toGetData.getModule();
-        StringBuffer modulett = new StringBuffer();
-        StringBuffer attendancemisst = new StringBuffer();
-
-        if (res != null && res.getCount() > 0) {
-            while (res.moveToNext()) {
-                modulett.append(res.getString(1) + "\n");
-                modulett.append(res.getString(2));
-                attendancemisst.append(res.getString(3) + "\n");
-                plus.setText("+");
-                minus.setText("-");
-            }
-            modulet.setText(modulett.toString());
-            attendancemiss.setText(attendancemisst.toString());
-           // plus.setText("+");
-            //minus.setText("-");
-        }
-
+        addmodule = findViewById(R.id.addmodule);
         addmodule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,5 +41,31 @@ public class Attendance extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        moduleDetailsList = new ArrayList<ModuleDetails>();
+        moduleDetailsList.clear();
+        Cursor c1 = db.query(ModuleDatabase.TABLE_NAME, null, null, null, null, null, null);
+        if (c1 != null && c1.getCount() != 0) {
+            moduleDetailsList.clear();
+            while (c1.moveToNext()) {
+                ModuleDetails moduleDetailsItem = new ModuleDetails();
+                moduleDetailsItem.setModuleId(c1.getInt(c1.getColumnIndex(ModuleDatabase._ID)));
+                moduleDetailsItem.setMcode(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL1)));
+                moduleDetailsItem.setMname(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL2)));
+                moduleDetailsItem.setMtutor(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL3)));
+                moduleDetailsItem.setMattendance(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL4)));
+                moduleDetailsList.add(moduleDetailsItem);
+            }
+        }
+        c1.close();
+        layoutManager = new LinearLayoutManager(this);
+        mopduleAdapter = new ModuleDetailsAdapter(moduleDetailsList);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(mopduleAdapter);
+    }
+    @Override
+    protected void onDestroy() {
+        db.close();
+        super.onDestroy();
     }
 }
