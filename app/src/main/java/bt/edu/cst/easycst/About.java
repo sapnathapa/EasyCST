@@ -18,15 +18,22 @@ public class About extends AppCompatActivity {
         webSettings=webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         String htmlText = " %s ";
-        String myData = "<html><body style=\"text-align:justify\">The E-Learning Application is a Mobile based application. " +
-                "The main objective of this application is to make it interactive \n" +
-                "\t    and its ease of use.The main features that the application provides are \n" +
-                "\t    online tutorial and tests, once the registered people select their \n" +
-                "\t\tinterested subjects. " +
-                "This helps to establish incremental learning process. Users can also \n" +
-                "\tdiscuss an issue/topic by posting messages in the discussion forum.\n" +
-                "              Along with this they can also take real time simulations of the most \n" +
-                "\t\t\twidely known competitive exams.</body></html>";
+        String myData =
+                "<html>" +
+                        "<body style=\"text-align:justify\">" +
+                        "<center><h3>Version : 1.0</h3></center>"+
+                        "<center><h3>About the App</h3></center>"+
+                "EasyCST, a platform where the student can have easy access to the service like maintenance."+
+                "\t User has a privilege to track ones attendance and own editable timetable."+
+                "\t User can provide feedback and suggestion for the betterment of the college."+
+                       "</body>" +
+                        "<center><h3>Developers</h3></center>"+
+                        "<center><h3>Special Thanks</h3></center>"+
+                "</html>";
+
+
+
+
 //        String myData = "Hello World! This tutorial is to show demo of displaying text with justify alignment in WebView.";
 
         webView.loadData(String.format(htmlText,myData),"text/html","utf-8");

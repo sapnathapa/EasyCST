@@ -22,7 +22,6 @@
         </activity>
         <activity
             android:name=".Home"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
