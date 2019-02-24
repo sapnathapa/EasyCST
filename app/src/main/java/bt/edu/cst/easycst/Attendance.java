@@ -53,7 +53,7 @@ public class Attendance extends AppCompatActivity {
                 moduleDetailsItem.setMcode(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL1)));
                 moduleDetailsItem.setMname(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL2)));
                 moduleDetailsItem.setMtutor(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL3)));
-                moduleDetailsItem.setMattendance(c1.getString(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL4)));
+                moduleDetailsItem.setMattendance(c1.getInt(c1.getColumnIndex(ModuleDatabase.COLUMN_NAME_COL4)));
                 moduleDetailsList.add(moduleDetailsItem);
             }
         }

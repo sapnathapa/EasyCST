@@ -39,11 +39,13 @@ public class AddModule extends AppCompatActivity {
                 mcodes = mcode.getText().toString();
                 mnames = mname.getText().toString();
                 mtutors = mtutor.getText().toString();
+                int attendance=0;
 
                 ContentValues values = new ContentValues();
                 values.put(ModuleDatabase.COLUMN_NAME_COL1, mcodes);
                 values.put(ModuleDatabase.COLUMN_NAME_COL2, mnames);
                 values.put(ModuleDatabase.COLUMN_NAME_COL3, mtutors);
+                values.put(ModuleDatabase.COLUMN_NAME_COL4, attendance);
 
                 long rowId = db.insert(ModuleDatabaseContract.ModuleDatabase.TABLE_NAME, null, values);
                 if (rowId != -1) {
