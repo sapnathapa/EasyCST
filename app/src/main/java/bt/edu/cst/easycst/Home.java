@@ -27,6 +27,7 @@ public class Home extends AppCompatActivity {
         ImageView football =(ImageView) findViewById(R.id.football);
         ImageView help =(ImageView) findViewById(R.id.help);
 
+
         maintain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
