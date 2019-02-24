@@ -25,6 +25,7 @@ public class Home extends AppCompatActivity {
         ImageView rate =(ImageView) findViewById(R.id.rate);
         ImageView share =(ImageView) findViewById(R.id.share);
         ImageView football =(ImageView) findViewById(R.id.football);
+        //ImageView help = (ImageView) findViewById(R.id.help);
 
         maintain.setOnClickListener(new View.OnClickListener() {
             @Override
