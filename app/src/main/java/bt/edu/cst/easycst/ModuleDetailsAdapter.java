@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import bt.edu.cst.easycst.R;
@@ -48,6 +50,7 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
         holder.ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //holder.ivMenu.setBackgroundResource(R.drawable.ic_more_vert_black);
                 final ModuleDetails userDetails = moduleDetailsList.get(position);
                 final int moduleID = userDetails.getModuleID();
                 dbHelper = new ModuleDatabaseHelper(context);
@@ -85,14 +88,14 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
     }
     public class ModuleViewHolder extends RecyclerView.ViewHolder {
         TextView tvName, tvAddress, tvPhone, tvProfession;
-        ImageView ivMenu;
+        ImageButton ivMenu;
         public ModuleViewHolder(View itemView) {
             super(itemView);
             tvName = (TextView) itemView.findViewById(R.id.mcoded);
             tvAddress = (TextView) itemView.findViewById(R.id.mnamed);
             tvPhone = (TextView) itemView.findViewById(R.id.mtutord);
             tvProfession = (TextView) itemView.findViewById(R.id.mabsentd);
-            ivMenu = (ImageView) itemView.findViewById(R.id.iv_menu);
+            ivMenu = (ImageButton) itemView.findViewById(R.id.iv_menu);
         }
     }
 }
