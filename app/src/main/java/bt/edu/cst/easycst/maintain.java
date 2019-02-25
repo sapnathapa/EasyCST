@@ -42,7 +42,7 @@ public class maintain extends AppCompatActivity {
     ProgressDialog progressDialog;
 
     // Storing server url into String variable.
-    String HttpUrl = "http://192.168.42.249/easycst/maintain.php";
+    String HttpUrl = "http://easycst.dx.am/maintain.php";
 
     Boolean CheckEditText ;
 
