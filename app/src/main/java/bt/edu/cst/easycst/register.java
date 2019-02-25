@@ -53,7 +53,7 @@ public class register extends AppCompatActivity {
     RadioGroup gender;
 
     // Storing server url into String variable.
-    String HttpUrl = "http://192.168.42.249/easycst/register.php";
+    String HttpUrl = "http://easycst.dx.am/register.php";
 
     Boolean CheckEditText ;
 
