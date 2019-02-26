@@ -24,58 +24,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/card_view"
-                android:layout_gravity="center"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="8dp">
+            <!--<android.support.v7.widget.CardView-->
+                <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_marginStart="5dp"-->
+                <!--android:layout_marginEnd="5dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/card_view"-->
+                <!--android:layout_gravity="center"-->
+                <!--card_view:cardCornerRadius="4dp"-->
+                <!--card_view:cardElevation="8dp">-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/textView4"-->
-                    <!--android:layout_width="219dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginStart="20dp"-->
-                    <!--android:layout_marginTop="20dp"-->
-                    <!--android:layout_marginEnd="250dp"-->
-                    <!--android:layout_marginBottom="100dp"-->
-                    <!--android:text="Maintanance Registration"-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:textSize="18sp"-->
-                    <!--android:textStyle="bold" />-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/textView5"-->
-                    <!--android:layout_width="345dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginStart="20dp"-->
-                    <!--android:layout_marginTop="-99dp"-->
-                    <!--android:contentDescription="@string/h_maintanance"-->
-                    <!--android:text="@string/h_maintanance"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textStyle="bold" />-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/textView7"-->
-                    <!--android:layout_width="219dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginStart="20dp"-->
-                    <!--android:layout_marginTop="20dp"-->
-                    <!--android:layout_marginEnd="250dp"-->
-                    <!--android:layout_marginBottom="100dp"-->
-                    <!--android:text="Timetable"-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:textSize="18sp"-->
-                    <!--android:textStyle="bold" />-->
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="331dp"
+                    android:id="@+id/textView4"
+                    android:layout_width="347dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
@@ -84,41 +48,77 @@
                     android:text="Maintanance Registration"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView5"
                     android:layout_width="345dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="-90dp"
                     android:contentDescription="@string/h_maintanance"
                     android:text="@string/h_maintanance"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="331dp"
+                    android:id="@+id/textView7"
+                    android:layout_width="345dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="250dp"
                     android:layout_marginBottom="100dp"
-                    android:text="Timetable"
+                    android:text="Attendenance Tracking"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"  />
+                    android:textStyle="bold" />
+                <!--<TextView-->
+                    <!--android:id="@+id/textView3"-->
+                    <!--android:layout_width="331dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_marginEnd="250dp"-->
+                    <!--android:layout_marginBottom="100dp"-->
+                    <!--android:text="Maintanance Registration"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"/>-->
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="-20dp"
-                    android:text="Attendance" />
+                <!--<TextView-->
+                    <!--android:id="@+id/textView4"-->
+                    <!--android:layout_width="345dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="50dp"-->
+                    <!--android:contentDescription="@string/h_maintanance"-->
+                    <!--android:text="@string/h_maintanance"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold" />-->
 
-            </android.support.v7.widget.CardView>
+                <!--<TextView-->
+                    <!--android:id="@+id/textView6"-->
+                    <!--android:layout_width="331dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="130dp"-->
+                    <!--android:layout_marginEnd="250dp"-->
+                    <!--android:layout_marginBottom="100dp"-->
+                    <!--android:text="Timetable"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"  />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="-20dp"-->
+                    <!--android:text="Attendance" />-->
+
+            <!--</android.support.v7.widget.CardView>-->
     </LinearLayout>
 </ScrollView>
 </android.support.constraint.ConstraintLayout>
