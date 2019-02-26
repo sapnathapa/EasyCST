@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import bt.edu.cst.easycst.ModuleDatabaseContract.ModuleDatabase;
 import java.util.List;
@@ -27,7 +26,7 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
     List<ModuleDetails> moduleDetailsList;
     Context context;
     ModuleDatabaseHelper dbHelper;
-    List<ModuleDetails> userDetailsList;
+    //List<ModuleDetails> moduleDetailsList;
     SQLiteDatabase db;
 
     public ModuleDetailsAdapter(List<ModuleDetails> moduleDetailsList) {
@@ -102,6 +101,25 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
                 values.put("attendance", attendance);
 
                 db.update(ModuleDatabase.TABLE_NAME, values, ModuleDatabase._ID + " = " + moduleID, null );
+                notifyDataSetChanged();
+                db.close();
+            }
+        });
+        holder.minusbutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                final ModuleDetails userDetails = moduleDetailsList.get(position);
+                final int moduleID = userDetails.getModuleID();
+                dbHelper = new ModuleDatabaseHelper(context);
+                db = dbHelper.getWritableDatabase();
+                int oldattendance=userDetails.getMattendance();
+                int attendance = --oldattendance;
+
+                ContentValues values = new ContentValues();
+                values.put("attendance", attendance);
+
+                db.update(ModuleDatabase.TABLE_NAME, values, ModuleDatabase._ID + " = " + moduleID, null );
                 db.close();
             }
         });
@@ -111,6 +129,7 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
     public int getItemCount() {
         return moduleDetailsList.size();
     }
+
 
     public class ModuleViewHolder extends RecyclerView.ViewHolder {
         TextView tvName, tvAddress, tvPhone, tvProfession;
