@@ -22,7 +22,7 @@ public class About extends AppCompatActivity {
         webSettings=webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         TextView tv = (TextView)findViewById(R.id.text);
-        //tv.setMovementMethod(LinkMovementMethod.getInstance());
+        tv.setMovementMethod(LinkMovementMethod.getInstance());
 //      webView.setData(LinkMovementMethod.getInstance());
         String htmlText = " %s ";
 
