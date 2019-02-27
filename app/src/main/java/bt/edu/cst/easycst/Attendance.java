@@ -59,7 +59,7 @@ public class Attendance extends AppCompatActivity {
         }
         c1.close();
         layoutManager = new LinearLayoutManager(this);
-        mopduleAdapter = new ModuleDetailsAdapter(moduleDetailsList);
+        mopduleAdapter = new ModuleDetailsAdapter(moduleDetailsList,this,recyclerView);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mopduleAdapter);
     }
