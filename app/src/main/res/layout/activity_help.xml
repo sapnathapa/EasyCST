@@ -21,8 +21,45 @@
         <LinearLayout
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/link1"
+               android:linksClickable="true"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="30dp"
+               android:text="@string/l1"
+               />
+            <TextView
+                android:id="@+id/link2"
+                android:linksClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/l2"
+                />
+            <TextView
+                android:id="@+id/link3"
+                android:linksClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/l3"
+                />
+            <TextView
+                android:id="@+id/link4"
+                android:linksClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/l4"
+                />
 
             <!--<android.support.v7.widget.CardView-->
                 <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
@@ -36,8 +73,16 @@
                 <!--android:layout_gravity="center"-->
                 <!--card_view:cardCornerRadius="4dp"-->
                 <!--card_view:cardElevation="8dp">-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/alpha_black2"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
 
-                <TextView
+
+            <TextView
                     android:id="@+id/textView4"
                     android:layout_width="347dp"
                     android:layout_height="wrap_content"
@@ -50,30 +95,65 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="345dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="-90dp"
-                    android:contentDescription="@string/h_maintanance"
-                    android:text="@string/h_maintanance"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/text"
+                android:layout_width="347dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-90dp"
+                android:text="@string/h_maintanance"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="345dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="250dp"
-                    android:layout_marginBottom="100dp"
-                    android:text="Attendenance Tracking"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
                 <!--<TextView-->
+                    <!--android:id="@+id/textView5"-->
+                    <!--android:layout_width="345dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginTop="-90dp"-->
+                    <!--android:contentDescription="@string/h_maintanance"-->
+                    <!--android:text="@string/h_maintanance"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="250dp"
+                android:layout_marginBottom="100dp"
+                android:text="Attendenance Tracking"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="250dp"
+                android:layout_marginBottom="100dp"
+                android:text="Feedback"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="250dp"
+                android:layout_marginBottom="100dp"
+                android:text="Timetable"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<TextView-->
                     <!--android:id="@+id/textView3"-->
                     <!--android:layout_width="331dp"-->
                     <!--android:layout_height="wrap_content"-->
