@@ -19,7 +19,7 @@ import java.util.List;
 public class Attendance extends AppCompatActivity {
     ModuleDatabaseHelper dbHelper;
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter mopduleAdapter;
+    private ModuleDetailsAdapter mopduleAdapter;
     private RecyclerView.LayoutManager layoutManager;
     FloatingActionButton addmodule;
     List<ModuleDetails> moduleDetailsList;
@@ -59,7 +59,7 @@ public class Attendance extends AppCompatActivity {
         }
         c1.close();
         layoutManager = new LinearLayoutManager(this);
-        mopduleAdapter = new ModuleDetailsAdapter(moduleDetailsList);
+        mopduleAdapter = new ModuleDetailsAdapter(moduleDetailsList,this,recyclerView);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mopduleAdapter);
     }
@@ -68,4 +68,11 @@ public class Attendance extends AppCompatActivity {
         db.close();
         super.onDestroy();
     }
+    /*@Override
+    protected void onResume() {
+        super.onResume();
+        moduleDetailsList.clear();
+        mopduleAdapter.addAll(db.getNote());
+        mopduleAdapter.notifyDataSetChanged();
+    }*/
 }

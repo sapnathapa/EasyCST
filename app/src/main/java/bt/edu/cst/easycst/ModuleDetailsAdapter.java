@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,34 +19,42 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import bt.edu.cst.easycst.ModuleDatabaseContract.ModuleDatabase;
 import java.util.List;
 
 public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdapter.ModuleViewHolder> {
-    List<ModuleDetails> moduleDetailsList;
-    Context context;
+     private List<ModuleDetails> moduleDetailsList;
+    private Context context;
+    //int abscount=0;
+    public RecyclerView rv;
     ModuleDatabaseHelper dbHelper;
-    List<ModuleDetails> userDetailsList;
+    //List<ModuleDetails> moduleDetailsList;
     SQLiteDatabase db;
+    private MyClickListener clickListener;
 
-    public ModuleDetailsAdapter(List<ModuleDetails> moduleDetailsList) {
-        this.moduleDetailsList = moduleDetailsList;
+    public ModuleDetailsAdapter(List<ModuleDetails> moduleList, Attendance attendance, RecyclerView recyclerView) {
+        this.context=attendance;
+        moduleDetailsList = moduleList;
+        rv=recyclerView;
     }
-
+    @NonNull
     @Override
-    public ModuleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        context = parent.getContext();
+    public ModuleDetailsAdapter.ModuleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View iteView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_modules, parent, false);
+
+        /*context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View iteView = inflater.inflate(R.layout.list_modules, parent, false);
         ModuleViewHolder viewHolder = new ModuleViewHolder(iteView);
-        return viewHolder;
+        return viewHolder;*/
+        return new ModuleDetailsAdapter.ModuleViewHolder(iteView);
     }
 
     @Override
-    public void onBindViewHolder(final ModuleViewHolder holder, final int position) {
-        ModuleDetails moduleDetails = moduleDetailsList.get(position);
+    public void onBindViewHolder(@NonNull final ModuleViewHolder holder, final int position) {
+        final ModuleDetails moduleDetails = moduleDetailsList.get(position);
         int att=moduleDetails.getMattendance();
         String a = "Absent for "+att+" day(s)";
         holder.tvName.setText(moduleDetails.getMcode());
@@ -54,10 +63,54 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
         holder.tvProfession.setText(a);
         //holder.tvProfession.setText("8");
 
+        holder.plusbutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                final ModuleDetails moduleDetails = moduleDetailsList.get(position);
+                final int moduleID = moduleDetails.getModuleID();
+                dbHelper = new ModuleDatabaseHelper(context);
+                db = dbHelper.getWritableDatabase();
+                int oldattendance=moduleDetails.getMattendance();
+                int newattendance = ++ oldattendance;
+
+                ContentValues values = new ContentValues();
+                values.put("attendance", newattendance);
+
+                db.update(ModuleDatabase.TABLE_NAME, values, ModuleDatabase._ID + " = " + moduleID, null );
+                db.close();
+                moduleDetails.setMattendance(newattendance);
+                moduleDetailsList.set(position, moduleDetails);
+                notifyDataSetChanged();
+            }
+        });
+
+        holder.minusbutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                final ModuleDetails moduleDetails = moduleDetailsList.get(position);
+                final int moduleID = moduleDetails.getModuleID();
+                dbHelper = new ModuleDatabaseHelper(context);
+                db = dbHelper.getWritableDatabase();
+                int oldattendance=moduleDetails.getMattendance();
+                int newattendance = -- oldattendance;
+
+                ContentValues values = new ContentValues();
+                values.put("attendance", newattendance);
+
+                db.update(ModuleDatabase.TABLE_NAME, values, ModuleDatabase._ID + " = " + moduleID, null );
+                db.close();
+                moduleDetails.setMattendance(newattendance);
+                moduleDetailsList.set(position, moduleDetails);
+                notifyDataSetChanged();
+            }
+        });
+
         holder.ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final ModuleDetails userDetails = moduleDetailsList.get(position);
+                ModuleDetails userDetails = moduleDetailsList.get(position);
                 final int moduleID = userDetails.getModuleID();
                 dbHelper = new ModuleDatabaseHelper(context);
                 db = dbHelper.getWritableDatabase();
@@ -87,24 +140,8 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
                 menu.show();
             }
         });
-        holder.plusbutton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                final ModuleDetails userDetails = moduleDetailsList.get(position);
-                final int moduleID = userDetails.getModuleID();
-                dbHelper = new ModuleDatabaseHelper(context);
-                db = dbHelper.getWritableDatabase();
-                int oldattendance=userDetails.getMattendance();
-                int attendance = ++ oldattendance;
 
-                ContentValues values = new ContentValues();
-                values.put("attendance", attendance);
-
-                db.update(ModuleDatabase.TABLE_NAME, values, ModuleDatabase._ID + " = " + moduleID, null );
-                db.close();
-            }
-        });
     }
 
     @Override
@@ -112,12 +149,14 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
         return moduleDetailsList.size();
     }
 
+
     public class ModuleViewHolder extends RecyclerView.ViewHolder {
         TextView tvName, tvAddress, tvPhone, tvProfession;
         ImageButton ivMenu;
         Button plusbutton, minusbutton;
+        MyClickListener listener;
 
-        public ModuleViewHolder(View itemView) {
+        public ModuleViewHolder( @NonNull View itemView) {
             super(itemView);
             tvName = (TextView) itemView.findViewById(R.id.mcoded);
             tvAddress = (TextView) itemView.findViewById(R.id.mnamed);
@@ -126,6 +165,12 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
             ivMenu = (ImageButton) itemView.findViewById(R.id.iv_menu);
             plusbutton = (Button) itemView.findViewById(R.id.absentplus);
             minusbutton = (Button) itemView.findViewById(R.id.absentminus);
+
+
         }
+    }
+    public interface MyClickListener {
+        void onIncrement(View v, int position);
+        void onDecrement(View v, int position);
     }
 }
