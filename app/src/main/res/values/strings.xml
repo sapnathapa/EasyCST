@@ -11,23 +11,23 @@
     <string name="new_password">Password</string>
     <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
-    <string name="ver_id">Version : 1.0</string>
-    <string name="aboutapp">EasyCST is a platform for the student to have easy access to various services such as
-                registration for maintenance services,self-tracking,adding and editing timetable and providing feedback for college.\n
-    </string>
-
-    <string name="about_dev">
-        1. <a herf="nathtek136@gmail.com" style ="text-decoration:none">Mr.Tek Nath Acharya</a>\n
-        2. <a herf="karmadorgey@gmail.com" style ="text-decoration:none">Mr.Karma Dorji</a>\n
-        3. <a herf="deepikasbr@gmail.com" style ="text-decoration:none">Ms.Deepika Suberi</a>\n
-        4. <a herf="kartse100@gmail.com" style ="text-decoration:none">Mr.Karma Tshewang</a>\n
-    </string>
-
-    <!--<string name="about_thank">-->
-        <!--1. Mr.Parshuram Dhungyel(parshuram.cst@ru.edu.bt)\n-->
-        <!--2. Mr.Hari Kafley(hari.kafley@itechnologies.bt)\n-->
-        <!--3. Mr.Khusant Chhetri(0215518.cst@rub.edu.bt)-->
+    <!--<string name="ver_id">Version : 1.0</string>-->
+    <!--<string name="aboutapp">EasyCST is a platform for the student to have easy access to various services such as-->
+                <!--registration for maintenance services,self-tracking,adding and editing timetable and providing feedback for college.\n-->
     <!--</string>-->
+
+    <!--<string name="about_dev">-->
+        <!--1. <a herf="nathtek136@gmail.com" style ="text-decoration:none">Mr.Tek Nath Acharya</a>\n-->
+        <!--2. <a herf="karmadorgey@gmail.com" style ="text-decoration:none">Mr.Karma Dorji</a>\n-->
+        <!--3. <a herf="deepikasbr@gmail.com" style ="text-decoration:none">Ms.Deepika Suberi</a>\n-->
+        <!--4. <a herf="kartse100@gmail.com" style ="text-decoration:none">Mr.Karma Tshewang</a>\n-->
+    <!--</string>-->
+
+    <string name="about_thank">
+        1. Mr.Parshuram Dhungyel\n
+        2. Mr.Hari Kafley(hari.kafley@itechnologies.bt)\n
+        3. Mr.Khusant Chhetri(0215518.cst@rub.edu.bt)\n
+    </string>
 
     <string name="h_maintanance">
         1. Type the room number.\n
@@ -43,10 +43,10 @@
     <!--<string name="url_market_search_app" translatable="false">market://search?q=pub:</string>-->
     <!--<string name="url_playstore_search_app" translatable="false">http://play.google.com/store/search?q=pub:</string>-->
     <!--<string name="app_link" translatable="false">https://play.google.com/store/apps/details?id=</string>-->
-    <string name="l1"><a style ="text-decoration:none" href= "@+id/textView4"> Maintenance Registration</a></string>
-    <string name="l2"><a style ="text-decoration:none" href= "link" > Attendance Tracking</a></string>
-    <string name="l3"><a style ="text-decoration:none" href= "link" > Feedback</a></string>
-    <string name="l4"><a style ="text-decoration:none" href= "link"> Timetable</a></string>
+    <string name="link1"><a href= "link"  style ="text-decoration:none"> Maintenance Registration</a></string>
+    <string name="link2"><a href= "link" style ="text-decoration:none"> Attendance Tracking</a></string>
+    <string name="link3"><a href= "link" style ="text-decoration:none"> Feedback</a></string>
+    <string name="link4"><a href= "link" style ="text-decoration:none"> Timetable</a></string>
 
 
     <!-- Main Content Label Resources -->
