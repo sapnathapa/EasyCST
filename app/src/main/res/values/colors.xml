@@ -5,4 +5,8 @@
     <color name="colorAccent">#067AD2</color>
     <color name="black">#000000</color>
     <color name="white">#FAFAFA</color>
+    <color name="alpha_black">#99000000</color>
+    <color name="alpha_black1">#66000000</color>
+    <color name="alpha_black2">#59000000</color>
+    <color name="alpha_black3">#33000000</color>
 </resources>
