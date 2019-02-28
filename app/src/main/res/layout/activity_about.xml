@@ -26,46 +26,46 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="@string/ver_id"
-                android:layout_gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="About the App"
-                android:layout_gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!--<TextView-->
+                <!--android:id="@+id/textView8"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:text="@string/ver_id"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/textView9"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="About the App"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
 
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:id="@+id/text1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/aboutapp"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
+            <!--<me.biubiubiu.justifytext.library.JustifyTextView-->
+                <!--android:id="@+id/text1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:text="@string/aboutapp"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="16sp" />-->
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Developers"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!--<TextView-->
+                <!--android:id="@+id/textView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="Developers"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
 
             <!--<me.biubiubiu.justifytext.library.JustifyTextView-->
                 <!--android:id="@+id/text2"-->
@@ -76,10 +76,10 @@
                 <!--android:textColor="@android:color/black"-->
                 <!--android:textSize="16sp" />-->
 
-            <!--<WebView-->
-                <!--android:id="@+id/webView"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent" />-->
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
 
             <!--<TextView-->
                 <!--android:id="@+id/textView8"-->
