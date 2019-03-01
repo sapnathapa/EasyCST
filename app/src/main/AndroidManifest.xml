@@ -45,25 +45,37 @@
             android:label="About Us"
             android:parentActivityName=".Home" />
         <activity android:name=".Share" />
-        <activity android:name=".Help"
+        <activity
+            android:name=".Help"
             android:label="Help"
-            android:parentActivityName=".Home"/>
+            android:parentActivityName=".Home" />
         <activity android:name=".Rate" />
         <activity
             android:name=".Attendance"
             android:label="Attendance Tracking"
-            android:parentActivityName=".Home"></activity>
+            android:parentActivityName=".Home" />
         <activity
             android:name=".AddModule"
             android:label="Add Module"
-            android:parentActivityName=".Attendance">
-        </activity>
-
+            android:parentActivityName=".Attendance" />
         <activity
             android:name=".UpdateModule"
             android:label="Update Module"
-            android:parentActivityName=".Attendance">
-        </activity>
+            android:parentActivityName=".Attendance" />
+        <activity
+            android:name=".TimeTable"
+            android:label="Time Table"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".TimeTable"
+            android:label="Settings"/>
+        <activity
+            android:name=".HomeworksActivity"
+            android:label="Assignments"
+            android:parentActivityName=".Home"
+            ></activity>
     </application>
 
 </manifest>
