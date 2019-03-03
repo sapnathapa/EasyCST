@@ -4,88 +4,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="top|center"
+    android:orientation="vertical"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:orientation="vertical"
     tools:context=".maintain">
-    <!--<EditText-->
-        <!--android:id="@+id/room"-->
-        <!--android:layout_marginTop="30dp"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="70dp"-->
-        <!--style="@style/Widget.AppCompat.EditText"-->
-        <!--android:hint="@string/room_number"-->
-        <!--android:autofillHints="HA-3-01"-->
-        <!--android:inputType="text" />-->
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="30dp"
-        android:id="@+id/roomWrapper"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/room"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            style="@style/Widget.AppCompat.EditText"
-            android:hint="Room Number"
-            android:autofillHints="HA-3-01"
-            android:inputType="text" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!--<EditText-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:id="@+id/phone"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="70dp"-->
-        <!--android:hint="@string/phone_number"-->
-        <!--android:inputType="numberSigned" />-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/roomWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp">
 
-    <!--<EditText-->
-        <!--android:layout_marginTop="30dp"-->
-        <!--android:id="@+id/descript"-->
-        <!--android:autofillHints="tubelight not working or fan not working"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="140dp"-->
-        <!--android:hint="@string/problem"-->
-        <!--android:inputType="textMultiLine" />-->
+                <EditText
+                    android:id="@+id/room"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:autofillHints="HA-3-01"
+                    android:hint="Room Number"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
 
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="20dp"
-        android:id="@+id/phoneWrapper"
-        android:layout_width="match_parent"
-        android:layout_height="70dp">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phoneWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp">
 
-        <EditText
-            android:id="@+id/phone"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Phone Number"
-            android:inputType="numberSigned"/>
-    </android.support.design.widget.TextInputLayout>
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Phone Number"
+                    android:inputType="numberSigned" />
+            </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="220dp"
-        android:text="@string/submit" />
+            <EditText
+                android:id="@+id/descript"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="tubelight not working or fan not working"
+                android:hint="@string/problem"
+                android:inputType="textMultiLine" />
 
-    <!--<android.support.design.widget.TextInputLayout-->
-        <!--android:id="@+id/descriptionWrapper"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="140dp"-->
-        <!--android:layout_marginTop="-250dp">-->
 
-        <EditText
-            android:id="@+id/descript"
-            android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:layout_marginTop="-265dp"
-            android:autofillHints="tubelight not working or fan not working"
-            android:hint="@string/problem"
-            android:inputType="textMultiLine" />
-    <!--</android.support.design.widget.TextInputLayout>-->
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/submit" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -68,11 +68,4 @@ public class Attendance extends AppCompatActivity {
         db.close();
         super.onDestroy();
     }
-    /*@Override
-    protected void onResume() {
-        super.onResume();
-        moduleDetailsList.clear();
-        mopduleAdapter.addAll(db.getNote());
-        mopduleAdapter.notifyDataSetChanged();
-    }*/
 }

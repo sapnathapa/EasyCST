@@ -2,12 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="nav_header_vertical_spacing">16dp</dimen>
-    <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="main_icon">80dp</dimen>
-    <dimen name="logo_icon">30dp</dimen>
-    <dimen name="line_spacing">5dp</dimen>
 
     <!-- Custom Dimensions -->
     <!-- The dimensions are in three categories for the small, medium and large device compatibility -->
@@ -15,9 +10,4 @@
     <dimen name="gridImageSize">60dp</dimen>
     <dimen name="logoImageSize">170dp</dimen>
 
-    <dimen name="spTitleDoc">25dp</dimen>
-
-    <dimen name="bottomRowSpace_mainScreen">25dp</dimen>
-
-    <dimen name="docScreenLog">50dp</dimen>
 </resources>

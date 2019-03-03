@@ -1,27 +1,12 @@
 <resources>
     <string name="app_name">Easy CST</string>
 
-    <string name="room_number">Room Number</string>
-    <string name="maintenance_registration">Maintenance Registration</string>
     <string name="submit">Submit</string>
     <string name="problem">Please describe your problem here.........</string>
-    <string name="phone_number">Phone Number</string>
     <string name="full_name">Full Name</string>
     <string name="user_id">User ID</string>
     <string name="new_password">Password</string>
-    <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
-    <!--<string name="ver_id">Version : 1.0</string>-->
-    <!--<string name="aboutapp">EasyCST is a platform for the student to have easy access to various services such as-->
-                <!--registration for maintenance services,self-tracking,adding and editing timetable and providing feedback for college.\n-->
-    <!--</string>-->
-
-    <!--<string name="about_dev">-->
-        <!--1. <a herf="nathtek136@gmail.com" style ="text-decoration:none">Mr.Tek Nath Acharya</a>\n-->
-        <!--2. <a herf="karmadorgey@gmail.com" style ="text-decoration:none">Mr.Karma Dorji</a>\n-->
-        <!--3. <a herf="deepikasbr@gmail.com" style ="text-decoration:none">Ms.Deepika Suberi</a>\n-->
-        <!--4. <a herf="kartse100@gmail.com" style ="text-decoration:none">Mr.Karma Tshewang</a>\n-->
-    <!--</string>-->
 
     <string name="about_thank">
         1. Mr.Parshuram Dhungyel\n
@@ -36,18 +21,6 @@
         4. Click summit.\n
     </string>
 
-    <!-- rate app -->
-    <!--<string name="install_google_play_store" translatable="false">Please install google play store and then try again.</string>-->
-    <!--<string name="url_market_details" translatable="false">market://details?id=</string>-->
-    <!--<string name="url_playstore_app" translatable="false">https://play.google.com/store/apps/details?id=</string>-->
-    <!--<string name="url_market_search_app" translatable="false">market://search?q=pub:</string>-->
-    <!--<string name="url_playstore_search_app" translatable="false">http://play.google.com/store/search?q=pub:</string>-->
-    <!--<string name="app_link" translatable="false">https://play.google.com/store/apps/details?id=</string>-->
-    <string name="link1"><a href= "link"  style ="text-decoration:none"> Maintenance Registration</a></string>
-    <string name="link2"><a href= "link" style ="text-decoration:none"> Attendance Tracking</a></string>
-    <string name="link3"><a href= "link" style ="text-decoration:none"> Feedback</a></string>
-    <string name="link4"><a href= "link" style ="text-decoration:none"> Timetable</a></string>
-
 
     <!-- Main Content Label Resources -->
 
@@ -60,5 +33,59 @@
     <string name="share">Share</string>
     <string name="rate">Rate</string>
     <string name="help">Help</string>
+
+    <!--Time Table and HomeWork Strings -->
+    <string name="action_settings">Settings</string>
+
+    <!-- Fragments strings -->
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="selected">Selected</string>
+
+    <!-- Main Activity strings -->
+    <string name="seven_days_of_the_week">7 Days of the Week</string>
+    <string name="subject">Module</string>
+    <string name="field_error">field can not be empty!</string>
+    <string name="time_error">Time field can not be empty!</string>
+    <string name="delete">Delete</string>
+
+    <string name="add_subject">Add Module</string>
+    <string name="edit_subject">Edit subject</string>
+    <string name="teacher">Tutor</string>
+    <string name="room">Class</string>
+    <string name="time">Time</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="time_to_dialog">To:</string>
+    <string name="time_from_dialog">From:</string>
+    <string name="subject_dialog">Module:</string>
+    <string name="teacher_dialog">Tutor:</string>
+    <string name="room_dialog">Class:</string>
+    <string name="select_time">Select time</string>
+    <string name="select_color">Select color</string>
+    <string name="choose_time">Choose time</string>
+    <string name="choose_date">Choose date</string>
+    <string name="choose_color">Choose color</string>
+
+    <!-- Homeworks Activity strings -->
+    <string name="select_date">Select date</string>
+    <string name="deadline_dialog">Deadline:</string>
+    <string name="description_dialog">Description:</string>
+    <string name="desctiption">Desctiption</string>
+    <string name="edit_homework">Edit homework</string>
+    <string name="add_homework">Add homework</string>
+    <string name="deadline_snackbar">"Deadline field can not be empty!</string>
+    <string name="date">Date</string>
+
+    <!-- Settings Activity strings -->
+    <string name="sevendays_setting">Enable 7 Days of the Week</string>
+
+
+    <!--Time Table and HomeWork Strings -->
 
 </resources>

@@ -16,8 +16,6 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-//import com.google.android.gms.common.api.GoogleApiClient;
-
 public class About extends AppCompatActivity {
 
     WebSettings webSettings;
@@ -33,27 +31,10 @@ public class About extends AppCompatActivity {
         view.getSettings().setJavaScriptEnabled(true);
         view.getSettings().setDomStorageEnabled(true);
         view.setWebViewClient(new MyBrowser());
-//        view.loadUrl("file:///android_asset/www/index.html");//try js alert
         view.loadUrl("myData");
         view.setWebChromeClient(new WebChromeClient()); // adding js alert
 
-//        webView = findViewById(R.id.webView);
-//        webSettings=webView.getSettings();
-//        webSettings.setJavaScriptEnabled(true);
-//        webView.loadUrl("#");
-//        TextView tv = (TextView)findViewById(R.id.text);
-////        tv.setMovementMethod(LinkMovementMethod.getInstance());
-//        tv.setText(Html.fromHtml(myData));
-//        tv.setMovementMethod(LinkMovementMethod.getInstance());
-////        tv.setText(Html.fromHtml(html));
-//         webView.setMovementMethod(LinkMovementMethod.getInstance());
-//        webView.setWebViewClient(new WebViewClient(){
-//            @Override
-//            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-//                view.loadUrl(request.toString());
-//                return true;
-//            }
-//        });
+
 
         String htmlText = " %s ";
 

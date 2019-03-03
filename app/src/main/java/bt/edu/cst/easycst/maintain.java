@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -50,7 +51,6 @@ public class maintain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maintain);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Assigning ID's to EditText.
         room1 =  findViewById(R.id.roomWrapper);
@@ -111,6 +111,7 @@ public class maintain extends AppCompatActivity {
                         Toast.makeText(maintain.this, ServerResponse, Toast.LENGTH_LONG).show();
                         if(ServerResponse.equals("Registration Successfull")){
                             startActivity(new Intent(maintain.this, Home.class));
+                            finish();
                         }
                     }
                 },
@@ -123,6 +124,7 @@ public class maintain extends AppCompatActivity {
 
                         // Showing error message if something goes wrong.
                         Toast.makeText(maintain.this, volleyError.toString(), Toast.LENGTH_LONG).show();
+                        finish();
                     }
                 }) {
             @Override
@@ -163,15 +165,11 @@ public class maintain extends AppCompatActivity {
         //Log.d("desc", DescriptHolder);
         Log.d("descritp",DescriptHolder);
         // Checking whether EditText value is empty or not.
-        if(TextUtils.isEmpty(RoomHolder) || TextUtils.isEmpty(RoomHolder) || TextUtils.isEmpty(DescriptHolder))
-        {
-
+        if(TextUtils.isEmpty(RoomHolder) || TextUtils.isEmpty(RoomHolder) || TextUtils.isEmpty(DescriptHolder)) {
             // If any of EditText is empty then set variable value as False.
             CheckEditText = false;
-
         }
         else {
-
             // If any of EditText is filled then set variable value as True.
             CheckEditText = true ;
         }
