@@ -8,17 +8,18 @@
     <string name="new_password">Password</string>
     <string name="register">Register</string>
 
+    <!--Maintenance Registration lable Resource-->
+    <string name="h_maintanance">
+        1. Fill up your room number.\n
+        2. Fill up your phone number.\n
+        3. Describe the problem related to the room.\n
+        4. Click summit.\n
+    </string>
+
     <string name="about_thank">
         1. Mr.Parshuram Dhungyel\n
         2. Mr.Hari Kafley(hari.kafley@itechnologies.bt)\n
         3. Mr.Khusant Chhetri(0215518.cst@rub.edu.bt)\n
-    </string>
-
-    <string name="h_maintanance">
-        1. Type the room number.\n
-        2. Type the phone number.\n
-        3. Describe the problem related to the room.\n
-        4. Click summit.\n
     </string>
 
 

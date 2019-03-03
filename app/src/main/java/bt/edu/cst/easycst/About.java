@@ -41,13 +41,11 @@ public class About extends AppCompatActivity {
         String myData = "<html><body style=\"text-align:justify\"><h2 align=\"center\">" +
                 "Version : 1.0</h2>" +
                 "<h2 align=\"center\">About App</h2>EasyCST is a platform for the student to have easy access to various services such as registration for maintenance services, self-tracking, adding and editing timetable and providing feedback for college." +
-                "<h2 align=\"center\">Developers</h2>1.<a href =\"mailto: nathtek136@gmail.com\" style = \"text-decoration:none\">Mr.Tek Nath Acharya</a><br><br>" +
-                "         2.<a href =\"mailto: karmadorgey@gmail.com\" style = \"text-decoration:none\">Mr.Karma Dorji</a><br><br>" +
-                "        3.<a href =\"mailto: deepikasbr@gmail.com\" style = \"text-decoration:none\">Ms.Deepika Suberi</a><br><br>" +
-                "        4.<a href =\"mailto: kartse100@gmail.com\" style = \"text-decoration:none\"> Mr.Karma Tshewang</a>" +
-                "<h2 align=\"center\">Special Thanks</h2>1.<a href =\"mailto: parshuram.cst@rub.edu.bt\" style = \"text-decoration:none\">Mr.Parshuram Dhungyel(project guide)</a><br><br>" +
-                "        2.<a href =\"mailto: hari.kafley@itechnologies.bt\" style = \"text-decoration:none\">Mr.Hari Kafley</a><br><br>" +
-                "        3.<a href =\"mailto: 0215518.cst@rub.edu.bt\" style = \"text-decoration:none\">Mr.Khusant Chhetri</a></body></html>";
+                "<h2 align=\"center\">Developers</h2><a href =\"mailto: nathtek136@gmail.com\" style = \"text-decoration:none\">Tek Nath Acharya</a><br><br>" +
+                "         <a href =\"mailto: karmadorgey@gmail.com\" style = \"text-decoration:none\">Karma Dorji</a><br><br>" +
+                "        <a href =\"mailto: deepikasbr@gmail.com\" style = \"text-decoration:none\">Deepika Suberi</a><br><br>" +
+                "        <a href =\"mailto: kartse100@gmail.com\" style = \"text-decoration:none\"> Karma Tshewang</a><br><br>" +
+                "        <a href =\"mailto: parshuram.cst@rub.edu.bt\" style = \"text-decoration:none\">Parshuram Dhungyel(project guide)</body></html>";
 
 
         view.loadData(String.format(htmlText,myData),"text/html","utf-8");
