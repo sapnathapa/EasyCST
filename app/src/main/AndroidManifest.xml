@@ -16,18 +16,19 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Home"
-            android:theme="@style/AppTheme"
+            android:theme="@style/HomeTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".maintain"
-            android:label="Maintenance Registration"
-            android:parentActivityName=".Home" />
+            android:noHistory="true"
+            android:theme="@style/AppThemeNoHome"
+            android:parentActivityName=".Home"
+            android:label="Maintenance Registration" />
         <activity
             android:name=".register"
             android:label="Create Your Account" />
@@ -44,26 +45,36 @@
             android:name=".About"
             android:label="About Us"
             android:parentActivityName=".Home" />
-        <activity android:name=".Share" />
-        <activity android:name=".Help"
+        <activity
+            android:name=".Help"
             android:label="Help"
-            android:parentActivityName=".Home"/>
-        <activity android:name=".Rate" />
+            android:parentActivityName=".Home" />
         <activity
             android:name=".Attendance"
             android:label="Attendance Tracking"
-            android:parentActivityName=".Home"></activity>
+            android:parentActivityName=".Home" />
         <activity
             android:name=".AddModule"
             android:label="Add Module"
-            android:parentActivityName=".Attendance">
-        </activity>
-
+            android:parentActivityName=".Attendance" />
         <activity
             android:name=".UpdateModule"
             android:label="Update Module"
-            android:parentActivityName=".Attendance">
-        </activity>
+            android:parentActivityName=".Attendance" />
+        <activity
+            android:name=".TimeTable"
+            android:label="Time Table"
+            android:parentActivityName=".Home"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".TimeTable"
+            android:label="Settings"/>
+        <activity
+            android:name=".HomeworksActivity"
+            android:label="Assignments"
+            android:parentActivityName=".Home"
+            ></activity>
     </application>
 
 </manifest>

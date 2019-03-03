@@ -95,7 +95,8 @@ public class ModuleDetailsAdapter extends RecyclerView.Adapter<ModuleDetailsAdap
                 db = dbHelper.getWritableDatabase();
                 int oldattendance=moduleDetails.getMattendance();
                 int newattendance = -- oldattendance;
-
+                if(newattendance < 0 )
+                    newattendance=0;
                 ContentValues values = new ContentValues();
                 values.put("attendance", newattendance);
 

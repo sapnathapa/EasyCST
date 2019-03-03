@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#FF0765AC</color>
+    <color name="colorPrimaryDark">#FF0765AC</color>
     <color name="colorAccent">#067AD2</color>
     <color name="black">#000000</color>
     <color name="white">#FAFAFA</color>
-    <color name="alpha_black">#99000000</color>
-    <color name="alpha_black1">#66000000</color>
     <color name="alpha_black2">#59000000</color>
-    <color name="alpha_black3">#33000000</color>
+    <color name="color_title">#ffffff</color>
+    <color name="red">#e90a37</color>
+    <color name="tabcolor">#067ad2</color>
 </resources>

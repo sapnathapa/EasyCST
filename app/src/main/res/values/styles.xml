@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Home Screen theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="HomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/artifika</item>
@@ -13,10 +13,33 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
     <!-- Style for pages other than home page -->
-    <style name="AppThemeNoHome" parent="Theme.AppCompat.Light">
+    <style name="AppThemeNoHome" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:fontFamily">@font/artifika</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@style/AppThemeNoHome">
+        <item name="android:textColor">@color/color_title</item>
+    </style>
+
+
+    <!-- Maintain theme -->
+    <style name="MaintainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3F51B5</item>
+        <!-- Light Indigo -->
+        <item name="colorPrimaryDark">#3949AB</item>
+        <!-- Dark Indigo -->
+        <item name="colorAccent">#00B0FF</item>
+        <!-- Blue -->
+    </style>
+    <!-- Maintain theme -->
+
 </resources>
