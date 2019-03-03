@@ -85,6 +85,11 @@
 
     <!-- Settings Activity strings -->
     <string name="sevendays_setting">Enable 7 Days of the Week</string>
+    <string name="module">Module</string>
+    <string name="tutor">Tutor</string>
+    <string name="time_from">Time from</string>
+    <string name="time_to">Time To</string>
+    <string name="classr">Class</string>
 
 
     <!--Time Table and HomeWork Strings -->
