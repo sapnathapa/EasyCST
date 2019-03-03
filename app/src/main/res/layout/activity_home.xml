@@ -1,251 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
     android:orientation="vertical"
     tools:context=".Home">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
 
-        <TableLayout
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/comm"
+                android:layout_width="@dimen/logoImageSize"
+                android:layout_height="@dimen/logoImageSize"
+                android:padding="10dp"
+                app:srcCompat="@drawable/cstlogo" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal">
 
 
-                <ImageView
-                    android:id="@+id/comm"
-                    android:layout_width="@dimen/logoImageSize"
-                    android:layout_height="@dimen/logoImageSize"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/cstlogo" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:gravity="center_horizontal">
-
-
-                <TextView
-                    android:id="@+id/l2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/app_name"
-                    android:textColor="@android:color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <!--- Home Icons Layout -->
-            <TableRow
-                android:paddingTop="20dp"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/l2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:weightSum="3">
+                android:text="@string/app_name"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+        </TableRow>
 
-                <ImageView
-                    android:id="@+id/maintain"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/maintanance" />
-                <ImageView
-                    android:id="@+id/timetable"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/time_table" />
-                <ImageView
-                    android:id="@+id/attendance"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/attendance" />
+        <!--- Home Icons Layout -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:weightSum="3">
 
-            </TableRow>
+            <ImageView
+                android:id="@+id/maintain"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/maintanance" />
 
-            <TableRow
-                android:paddingTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+            <ImageView
+                android:id="@+id/timetable"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/time_table" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/maintenance"
-                    android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/attendance"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/attendance" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/timetable"
-                    android:textColor="@android:color/black" />
+        </TableRow>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/attendance"
-                    android:textColor="@android:color/black" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp">
 
-            </TableRow>
-
-            <TableRow
-                android:paddingTop="20dp"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/maintenance"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/timetable"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/attendance"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="20dp">
 
 
-
-
-                <ImageView
-                    android:id="@+id/feedback"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/feedback" />
-
-                <ImageView
+            <ImageView
                 android:id="@+id/football"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/gridImageSize"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/assignment" />
 
-                <ImageView
-                    android:id="@+id/about"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/about" />
+            <ImageView
+                android:id="@+id/feedback"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/feedback" />
 
-            </TableRow>
+            <ImageView
+                android:id="@+id/about"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/about" />
 
-            <TableRow
-                android:paddingTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+        </TableRow>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/feedback"
-                    android:textColor="@android:color/black" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/football"
-                    android:textColor="@android:color/black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/about"
-                    android:textColor="@android:color/black" />
-
-            </TableRow>
-
-            <TableRow
-                android:paddingTop="20dp"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/football"
+                android:textColor="@android:color/black" />
 
-                <ImageView
-                    android:id="@+id/share"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/share" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/feedback"
+                android:textColor="@android:color/black" />
 
-                <ImageView
-                    android:id="@+id/rate"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rate" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/about"
+                android:textColor="@android:color/black" />
 
-                <ImageView
-                    android:id="@+id/help"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/gridImageSize"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/help" />
+        </TableRow>
 
-            </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="20dp">
 
-            <TableRow
-                android:paddingTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/share" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/share"
-                    android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/rate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/rate" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/rate"
-                    android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/help"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gridImageSize"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/help" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.33"
-                    android:text="@string/help"
-                    android:textColor="@android:color/black" />
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
-</LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/share"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/rate"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:text="@string/help"
+                android:textColor="@android:color/black" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:hint="Please type your feedback or suggestion here"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine|textCapSentences" />
 
     <Button
         android:layout_marginTop="20dp"
