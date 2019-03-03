@@ -13,7 +13,7 @@
 
         <TextView
             android:id="@+id/mcoded"
-            style="?android:textAppearanceLarge"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -21,15 +21,18 @@
             android:text="Module Code" />
 
         <TextView
+            android:textSize="17sp"
             android:id="@+id/mnamed"
+            android:layout_marginTop="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-
             android:text="Module Name" />
 
         <TextView
+            android:textSize="17sp"
             android:id="@+id/mtutord"
+            android:layout_marginTop="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -37,7 +40,9 @@
 
 
         <TextView
+            android:textSize="17sp"
             android:id="@+id/mabsentd"
+            android:layout_marginTop="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -45,6 +50,7 @@
 
 
         <TableRow
+            android:layout_marginTop="9dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="1">
@@ -53,6 +59,7 @@
                 android:id="@+id/absentplus"
                 android:layout_width="wrap_content"
                 android:layout_weight=".375"
+                android:background="@color/red"
                 android:layout_height="wrap_content"
                 android:text="Absent +" />
 
@@ -60,6 +67,7 @@
                 android:id="@+id/absentminus"
                 android:layout_width="wrap_content"
                 android:layout_weight=".375"
+                android:background="@color/green"
                 android:layout_height="wrap_content"
                 android:text="Absent -" />
 

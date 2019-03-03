@@ -59,7 +59,7 @@
             android:parentActivityName=".Attendance" />
         <activity
             android:name=".UpdateModule"
-            android:label="Update Module"
+            android:label="Edit Module"
             android:parentActivityName=".Attendance" />
         <activity
             android:name=".TimeTable"

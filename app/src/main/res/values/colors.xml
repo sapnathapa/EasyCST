@@ -7,6 +7,8 @@
     <color name="white">#FAFAFA</color>
     <color name="alpha_black2">#59000000</color>
     <color name="color_title">#ffffff</color>
-    <color name="red">#e90a37</color>
+    <color name="red">#b68a8a</color>
     <color name="tabcolor">#067ad2</color>
+    <color name="grey">#BDBDBD</color>
+    <color name="green">#abbf96</color>
 </resources>

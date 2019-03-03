@@ -1,51 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="top|center"
+    android:orientation="vertical"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:orientation="vertical"
     tools:context=".UpdateModule">
 
-    <EditText
-        android:id="@+id/updatemcode"
-        android:layout_marginTop="30dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:hint="Module code"
-        android:autofillHints="Introduction to programming CPL101"
-        android:inputType="text" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mcodeWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/updatemcode"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="HA-3-01"
+                android:hint="Module Code"
+                android:inputType="textCapCharacters" />
+        </android.support.design.widget.TextInputLayout>
 
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mnameWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp">
 
-    <EditText
-        android:id="@+id/updatemname"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:hint="Module name"
-        android:autofillHints="Introduction to programming CPL101"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/updatemtutor"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:hint="Module tutor"
-        android:autofillHints="Prof. Venka"
-        android:inputType="text" />
+            <EditText
+                android:id="@+id/updatemname"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints=""
+                android:hint="Module Name"
+                android:inputType="textCapWords" />
+        </android.support.design.widget.TextInputLayout>
 
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/updatesave"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Update" />
-</LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mtutorWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/updatemtutor"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints=""
+                android:hint="Module Tutor"
+                android:inputType="textCapWords" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/updatesave"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:text="Update" />
+    </LinearLayout>
+</ScrollView>

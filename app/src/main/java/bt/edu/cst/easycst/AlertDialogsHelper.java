@@ -278,15 +278,15 @@ public class AlertDialogsHelper {
                     week.setSubject(subject.getText().toString());
                     week.setFragment(fragment.find() ? fragment.group() : null);
                     week.setTeacher(teacher.getText().toString());
-                    week.setRoom(room.getText().toString());
+                    week.setRoom(room.getText().toString().toUpperCase());
                     week.setColor(buttonColor.getColor());
                     dbHelper.insertWeek(week);
                     adapter.notifyDataSetChanged();
                     subject.getText().clear();
                     teacher.getText().clear();
                     room.getText().clear();
-                    from_time.setText(R.string.select_time);
-                    to_time.setText(R.string.select_time);
+                    from_time.setText(R.string.time_from);
+                    to_time.setText(R.string.time_to);
                     select_color.setBackgroundColor(Color.WHITE);
                     subject.requestFocus();
                     dialog.dismiss();
